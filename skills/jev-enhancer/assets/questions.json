@@ -1,0 +1,22 @@
+{
+    "prompt_quality": {
+        "type": "score",
+        "instructions": "How well-engineered is the prompt for accomplishing the stated task?",
+        "criteria": [
+            "The prompt is vague, underspecified, or relies mostly on generic qualities without giving the agent enough concrete direction to perform the task reliably.",
+            "The prompt communicates the task and some useful expectations, but important details such as scope, constraints, desired output, or relevant context are missing or ambiguous.",
+            "The prompt clearly defines the task, relevant context, constraints, and expected output, giving the agent enough specific direction to perform the task reliably with minimal ambiguity."
+        ]
+    },
+    "primary_improvement": {
+        "type": "choice",
+        "instructions": "What is the single most important improvement needed to make this prompt more effective?",
+        "criteria": {
+            "task_definition": "Clarify what specific task or outcome the agent is expected to produce.",
+            "context": "Provide additional domain, project, or situational context needed to make a good decision.",
+            "constraints": "Specify concrete requirements, boundaries, priorities, or criteria the result must satisfy.",
+            "output_definition": "Define the expected structure, format, level of detail, or contents of the output.",
+            "no_major_improvement": "The prompt is already sufficiently specific and actionable; none of the other improvements would materially improve it."
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "prompt-enhancer",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Prompt enhancement agent skill backed by Jev",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "bash skills/jev-enhancer/scripts/measure.test.sh"
+  }
+}
