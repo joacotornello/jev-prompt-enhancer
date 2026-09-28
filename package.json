@@ -1,5 +1,5 @@
 {
-  "name": "prompt-enhancer",
+  "name": "jev-prompt-enhancer",
   "version": "1.0.0",
   "type": "module",
   "description": "Prompt enhancement agent skill backed by Jev",

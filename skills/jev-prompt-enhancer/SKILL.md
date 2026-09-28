@@ -1,5 +1,5 @@
 ---
-name: jev-enhancer
+name: jev-prompt-enhancer
 description: Evaluate and improve a prompt using Jev.
 disable-model-invocation: true
 ---
@@ -33,15 +33,15 @@ If any requirement is missing (Bash, Node.js 18+, or a nonempty `JEV_API_KEY`), 
 2. Verify that Bash is available and Node.js is version 18 or newer. Let `scripts/measure.sh` validate `JEV_API_KEY` after loading `.env`; do not reject a missing process-environment key before the script can load it. If any requirement check fails, follow the requirements guidance above and abort. If not:
 
 ```md
-**/jev-enhancer ❯ processing prompt**
+**/jev-prompt-enhancer ❯ processing prompt**
 ```
 
 3. Build a JSON object containing only `prompt` and optional `context` (a string, defaulting to `""`). Use `JSON.stringify` to encode text read from files or stdin; do not interpolate prompt text into JavaScript or manually escape JSON.
-4. From the working project root, pass that object through stdin to `bash /absolute/path/to/jev-enhancer/scripts/measure.sh`, using the actual installed skill path. This also works for shared installations outside the project. If invoking from another directory, set `JEV_ENV_FILE` to the working project's absolute `.env` path. Use a file redirect or a quoted heredoc (`<<'JSON'`) so the shell does not expand prompt content. Do not pass prompt or context as command-line arguments.
+4. From the working project root, pass that object through stdin to `bash /absolute/path/to/jev-prompt-enhancer/scripts/measure.sh`, using the actual installed skill path. This also works for shared installations outside the project. If invoking from another directory, set `JEV_ENV_FILE` to the working project's absolute `.env` path. Use a file redirect or a quoted heredoc (`<<'JSON'`) so the shell does not expand prompt content. Do not pass prompt or context as command-line arguments.
 5. If the quality is below the threshold and attempts remain, read the prompting reference as directed under "Low-score guidance" below, improve the prompt based on the script's feedback, and call it again with the improved prompt.
 
 ```md
-**/jev-enhancer ❯❯ enhancing prompt**
+**/jev-prompt-enhancer ❯❯ enhancing prompt**
 ```
 
 6. Output the result to the user:
@@ -49,7 +49,7 @@ If any requirement is missing (Bash, Node.js 18+, or a nonempty `JEV_API_KEY`), 
 ```md
 ## Enhanced prompt: << new enhanced prompt >>
 
-**/jev-enhancer ❯❯❯ proceeding with your task**
+**/jev-prompt-enhancer ❯❯❯ proceeding with your task**
 ```
 
 7. Continue the user requested workflow with your improved prompt.
@@ -57,7 +57,7 @@ If any requirement is missing (Bash, Node.js 18+, or a nonempty `JEV_API_KEY`), 
 Example (from the working project root; replace the script path with its installed location):
 
 ```sh
-bash /absolute/path/to/jev-enhancer/scripts/measure.sh <<'JSON'
+bash /absolute/path/to/jev-prompt-enhancer/scripts/measure.sh <<'JSON'
 {
   "prompt": "Plan the paper...",
   "context": "Scientific paper about..."

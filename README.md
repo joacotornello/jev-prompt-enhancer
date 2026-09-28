@@ -13,7 +13,7 @@ Whether you're fixing a bug, building a feature, or requesting a code review, th
 <p align="center">
   <a href="#setup">Get started</a> &nbsp; &middot; &nbsp;
   <a href="#usage">Try it out</a> &nbsp; &middot; &nbsp;
-  <a href="skills/jev-enhancer/SKILL.md">Explore the skill</a>
+  <a href="skills/jev-prompt-enhancer/SKILL.md">Explore the skill</a>
 </p>
 
 ## From intent to action
@@ -56,14 +56,14 @@ An existing nonempty environment key takes precedence. Never commit real API key
 
 ## Usage
 
-Invoke `$jev-enhancer` with your task. The agent measures the prompt, revises
+Invoke `$jev-prompt-enhancer` with your task. The agent measures the prompt, revises
 it when needed, and proceeds when it reaches 80/100 or uses all three attempts.
-Debug logs are written under `logs/jev-enhancer/` in the working workspace.
+Debug logs are written under `logs/jev-prompt-enhancer/` in the working workspace.
 
 To measure a prompt directly from the repository root:
 
 ```sh
-bash skills/jev-enhancer/scripts/measure.sh <<'JSON'
+bash skills/jev-prompt-enhancer/scripts/measure.sh <<'JSON'
 {"prompt":"Summarize the provided text in three bullet points.","context":""}
 JSON
 ```
