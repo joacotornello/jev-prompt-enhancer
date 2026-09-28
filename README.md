@@ -34,6 +34,12 @@ The loop stops at **80/100 by default** (or a threshold you specify), or when al
 
 ---
 
+# Install
+```sh
+npx skills add joacotornello/prompt-enhancer
+```
+
+
 ## Setup
 
 Use Bash and Node.js 18 or newer. No npm dependencies are required.
