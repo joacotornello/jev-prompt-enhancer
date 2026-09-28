@@ -52,7 +52,7 @@ for failure in http network; do
 done
 
 TEST_ROOT="$(mktemp -d)"
-TEST_SKILL="$TEST_ROOT/.agents/skills/jev-enhancer"
+TEST_SKILL="$TEST_ROOT/.agents/skills/jev-prompt-enhancer"
 TEST_WORKSPACE="$TEST_ROOT/workspace"
 trap 'rm -f -- "$TEST_ROOT/.env" "$TEST_WORKSPACE/.env" "$TEST_WORKSPACE/marker" "$TEST_SKILL/scripts/measure.sh" "$TEST_SKILL/assets/questions.json"; rmdir -- "$TEST_WORKSPACE" "$TEST_SKILL/scripts" "$TEST_SKILL/assets" "$TEST_SKILL" "$TEST_ROOT/.agents/skills" "$TEST_ROOT/.agents" "$TEST_ROOT"' EXIT
 mkdir -p "$TEST_SKILL/scripts" "$TEST_SKILL/assets" "$TEST_WORKSPACE"

@@ -6,7 +6,7 @@ dependencies. Set `JEV_API_KEY` in the agent environment or the working project'
 absolute `.env` path. The script parses literal key assignments when the
 environment key is missing or empty; it never executes `.env` as shell code.
 
-The implementation lives in `skills/jev-enhancer/`: `SKILL.md` defines
+The implementation lives in `skills/jev-prompt-enhancer/`: `SKILL.md` defines
 the workflow, `scripts/measure.sh` calls Jev, and `assets/questions.json` holds
 the scoring questions. Keep the implementation small and preserve user intent.
 

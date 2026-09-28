@@ -5,6 +5,6 @@
   "description": "Prompt enhancement agent skill backed by Jev",
   "engines": { "node": ">=18" },
   "scripts": {
-    "test": "bash skills/jev-enhancer/scripts/measure.test.sh"
+    "test": "bash skills/jev-prompt-enhancer/scripts/measure.test.sh"
   }
 }
